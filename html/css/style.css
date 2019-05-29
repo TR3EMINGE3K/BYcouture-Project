@@ -1,14 +1,17 @@
-html {
+body {
     background: #FDBFB7;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    background-image: url(image/img.jpg);
+    background-repeat: no-repeat;
 }
 
 .onglet {
     display: table;
-    width: 500px;
-    margin: 200px auto;
+    width: 1920px;
+    margin: 380px auto;
     padding: 0;
     background: #DE3163;
-    border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 
@@ -33,4 +36,13 @@ html {
 .onglet li a:active {
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .1));
     box-shadow: 0 0 2px rgba(0, 0, 0, .3) inset;
+}
+
+h1 {
+    color: #DE3163;
+}
+
+p {
+    color: black;
+    text-align: center
 }
