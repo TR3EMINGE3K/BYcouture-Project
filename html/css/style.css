@@ -2,12 +2,11 @@
     font-family: "signature";
     src: url('police/signature.ttf');
 }
+
 @font-face {
     font-family: "fabiana";
     src: url('police/fabiana.ttf');
 }
-
-
 
 body {
     background: #FDBFB7;
@@ -17,13 +16,23 @@ body {
     font-family: Verdana, Tahoma, sans-serif;
 }
 
+header {
+    display: table;
+    width: 100%;
+    line-height: 15%;
+    background: gray;
+    margin-bottom: 20%;
+    text-align: center;
+}
+
 .onglet {
     display: table;
-    width: 1920px;
-    margin: 380px auto;
-    padding: 0;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
     background: #DE3163;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    ;
 }
 
 .onglet li {
