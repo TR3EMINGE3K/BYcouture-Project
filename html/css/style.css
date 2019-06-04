@@ -84,10 +84,33 @@
 
 body {
     background: #FDBFB7;
-    margin: 0;
     background-image: url(image/img.jpg);
     background-repeat: no-repeat;
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    line-height: 1;
+    -webkit-text-size-adjust: none;
+    -ms-overflow-style: scrollbar;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@media screen and (max-width: 480px) {
+    html,
+    body {
+        min-width: 320px;
+    }
 }
 
 header {
@@ -99,10 +122,18 @@ header {
     text-align: center;
 }
 
+footer {
+    display: table;
+    width: 100%;
+    line-height: 25%;
+    background: #324072;
+    text-align: center;
+}
+
 .onglet {
     display: table;
     width: 100%;
-    margin: 0%;
+    margin-top: 22.5%;
     padding: 0%;
     background: #DE3163;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
@@ -155,6 +186,18 @@ h6.major {
 
 
 /* boites */
+
+.boites {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 0 2em 0;
+}
 
 .boites article {
     padding: 1.75em 1.75em 0.1em 1.75em;
@@ -316,4 +359,43 @@ h6.major {
 
 .listetaro {
     text-align: justify;
+}
+
+article,
+section {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* List */
+
+ul {
+    list-style: disc;
+    margin: 0 0 2em 0;
+    padding-left: 1em;
+}
+
+ul li {
+    padding-left: 0.5em;
+}
+
+ul.alt {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.alt li {
+    border-top: solid 1px rgba(255, 255, 255, 0.125);
+    padding: 0.5em 0;
+}
+
+ul.alt li:first-child {
+    border-top: 0;
+    padding-top: 0;
 }
