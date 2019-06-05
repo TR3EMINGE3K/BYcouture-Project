@@ -96,6 +96,34 @@ body {
     -ms-overflow-style: scrollbar;
 }
 
+
+/* Basic */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    -ms-overflow-style: scrollbar;
+}
+
+@media screen and (max-width: 480px) {
+    html,
+    body {
+        min-width: 320px;
+    }
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -111,6 +139,19 @@ html {
     body {
         min-width: 320px;
     }
+}
+
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
 }
 
 header {
@@ -199,6 +240,18 @@ h6.major {
     margin: 0 0 2em 0;
 }
 
+.ret {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 0 2em 0;
+}
+
 .boites article {
     padding: 1.75em 1.75em 0.1em 1.75em;
     background-color: #DE3163;
@@ -207,24 +260,38 @@ h6.major {
     width: calc(50% - 1.5em);
 }
 
-.boites article:nth-child(2n) {
+.ret article {
+    padding: 1.75em 1.75em 0.1em 1.75em;
+    background-color: #DE3163;
+    border-radius: 5px;
+    margin: 1.5em 3em 1.5em 0;
+    width: calc(50% - 1.5em);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boites article:nth-child(2n),
+.ret article:nth-child(2n) {
     margin-right: 0;
 }
 
 @media screen and (max-width: 980px) {
-    .boites article {
+    .boites article,
+    .ret article {
         margin: 1em 2em 1em 0;
         width: calc(50% - 1em);
     }
 }
 
 @media screen and (max-width: 736px) {
-    .boites article {
+    .boites article,
+    .ret article {
         padding: 1.5em 1.5em 0.1em 1.5em;
         margin: 0.875em 1.75em 0.875em 0;
         width: calc(50% - 0.875em - 1px);
     }
-    .boites article .image {
+    .boites article .image,
+    .ret article .image {
         margin-bottom: 1.5em;
         margin-left: -1.5em;
         margin-top: -1.5em;
@@ -233,10 +300,12 @@ h6.major {
 }
 
 @media screen and (max-width: 480px) {
-    .boites {
+    .boites,
+    .ret {
         display: block;
     }
-    .boites article {
+    .boites article,
+    .ret article {
         width: 100%;
         margin: 0 0 2em 0 !important;
     }
@@ -357,10 +426,6 @@ h6.major {
     }
 }
 
-.listetaro {
-    text-align: justify;
-}
-
 article,
 section {
     display: block;
@@ -369,7 +434,6 @@ section {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
 }
 
 
@@ -398,4 +462,8 @@ ul.alt li {
 ul.alt li:first-child {
     border-top: 0;
     padding-top: 0;
+}
+
+.listetaro {
+    text-align: justify;
 }
