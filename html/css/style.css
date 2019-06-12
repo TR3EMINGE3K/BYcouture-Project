@@ -164,12 +164,13 @@ header {
 }
 
 footer {
-    display: table;
+    display: block;
     width: 100%;
     line-height: 25%;
     background: #324072;
     text-align: center;
     margin-bottom: 0;
+    border: 0;
 }
 
 .onglet {
@@ -433,8 +434,7 @@ h3.major {
 }
 
 article,
-section,
-{
+section {
     display: block;
     margin: 0;
     padding: 0;
@@ -619,7 +619,7 @@ form> :last-child {
     margin-bottom: 0;
 }
 
-form>.fields {
+form>.champs {
     display: -moz-flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -632,7 +632,7 @@ form>.fields {
     margin: -1.5em 0 2em -1.5em;
 }
 
-form>.fields>.field {
+form>.champs>.champ {
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
     -ms-flex-grow: 0;
@@ -645,34 +645,34 @@ form>.fields>.field {
     width: calc(100% - 1.5em);
 }
 
-form>.fields>.field.half {
+form>.champs>.champ.half {
     width: calc(50% - 0.75em);
 }
 
-form>.fields>.field.third {
+form>.champs>.champ.third {
     width: calc(100%/3 - 0.5em);
 }
 
-form>.fields>.field.quarter {
+form>.champs>.champ.quarter {
     width: calc(25% - 0.375em);
 }
 
 @media screen and (max-width: 480px) {
-    form>.fields {
+    form>.champs {
         width: calc(100% + 3em);
         margin: -1.5em 0 2em -1.5em;
     }
-    form>.fields>.field {
+    form>.champs>.champ {
         padding: 1.5em 0 0 1.5em;
         width: calc(100% - 1.5em);
     }
-    form>.fields>.field.half {
+    form>.champs>.champ.half {
         width: calc(100% - 1.5em);
     }
-    form>.fields>.field.third {
+    form>.champs>.champ.third {
         width: calc(100% - 1.5em);
     }
-    form>.fields>.field.quarter {
+    form>.champs>.champ.quarter {
         width: calc(100% - 1.5em);
     }
 }
