@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset = UTF-8" />
     <link rel="stylesheet" href="css/style.css">
     <title>BY COUTURE - contact</title>
     <link rel="icon" href="image/machine.ico" type="image/x-icon" />
@@ -17,7 +17,7 @@
         <li><a href="home.html" title="Pour retourner à l'accueil.">L'accueil</a></li>
         <li><a href="retouches.html" title="Les informations concernant les type de retouche.">Retouche</a></li>
         <li><a href="tarifs.html" title="Pour consulter mes tarifs.">Les tarifs</a></li>
-        <li><a href="contact.html" title="Toutes les infos pour me contacter sont là ! ">Contact</a></li>
+        <li><a href="contact.php" title="Toutes les infos pour me contacter sont là ! ">Contact</a></li>
     </ul>
 
 </body>
@@ -26,43 +26,39 @@
     <div class="inner">
         <h2 class="major">Contactez-moi</h2>
 
-        <form method="post">
+        <form action ="contactform.php" method="post">
 
             <div class="champs">
+                <div class="champ">
+                    <label for="name">Nom</label>
+					<input type="text" name="name" />
+                </div>
                 <div class="champ">
                     <label for="email">Adresse email</label>
                     <input type="email" name="email" required />
                 </div>
                 <div class="champ">
                     <label for="subject">Objet</label>
-                    <input type="text" name="subject" id="subject">
+                    <input type="text" name="subject">
                 </div>
                 <div class="champ">
                     <label for="message">Message</label>
                     <textarea name="message"  rows="5"></textarea>
                 </div>
             </div>
+            <ul class="actions">
+            	<button type="submit" name="submit">Envoyer le message</button>
+			</ul>
         </form>
-        <?php
-            if (isset($_POST['message'])) {
-                $position_arobase = strpos($_POST['email'], '@');
-                if($position_arobase === false)
-                    echo '<p>Votre email doit comporter un arobase.</p>';
-                else {
-                    $retour=mail('medhi.louison@icloud.com', $_POST['subject'], $_POST['message'], 'From : ' . $_POST['email']);
-                    if($retour)
-                        echo '<p>Votre message a été envoyé.</p>';
-                    else
-                        echo '<p>Erreur.</p>';
-                    }
-            }
-        ?>
         <ul class="contact">
             <li class="logoAdresse">
                 16 rue Narcisse Lanchy
             </li>
             <li class="logoTel">
                 06 60 06 06 60
+            </li>
+            <li class="logoMail">
+                yaminaboukhirane@orange.fr
             </li>
 
         </ul>
