@@ -1329,6 +1329,10 @@ textarea {
     line-height: 1.65;
 }
 
+textarea {
+    background-color: #000000;
+}
+
 @media screen and (max-width: 1680px) {
     body,
     input,
@@ -1434,4 +1438,53 @@ a.special:not(.button):hover:before {
 
 a.special:not(.button):active:before {
     background-color: rgba(255, 255, 255, 0.075);
+}
+
+input,
+select,
+textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.025);
+    border-radius: 5px;
+    border: none;
+    border: solid 2px rgba(255, 255, 255, 0.125);
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    width: 100%;
+}
+
+input[type="text"]:invalid,
+input[type="password"]:invalid,
+input[type="email"]:invalid,
+input[type="tel"]:invalid,
+select:invalid,
+textarea:invalid {
+    box-shadow: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #5b6ba6;
 }
