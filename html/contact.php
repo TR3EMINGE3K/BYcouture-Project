@@ -7,6 +7,7 @@
     <title>BY COUTURE - contact</title>
     <link rel="icon" href="image/machine.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="image/machine.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/ded4d9e6a2.js"></script>
 </head>
 <header>
     <h1 class="kiona">Pour me contacter</h1>
@@ -47,18 +48,18 @@
                 </div>
             </div>
             <ul class="actions">
-            	<button type="submit" name="submit">Envoyer le message</button>
+            <li><input type="submit" value="Envoyer le message" /></li>
 			</ul>
         </form>
         <ul class="contact">
             <li class="logoAdresse">
-                16 rue Narcisse Lanchy
+            <i class="fas fa-home"></i>  16 rue Narcisse Lanchy
             </li>
             <li class="logoTel">
-                06 60 06 06 60
+            <i class="fas fa-phone"></i>  06 81 58 69 84
             </li>
             <li class="logoMail">
-                yaminaboukhirane@orange.fr
+            <i class="fas fa-at"></i>  yaminaboukhirane@orange.fr
             </li>
 
         </ul>
